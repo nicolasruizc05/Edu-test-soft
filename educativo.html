@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Educativo - Tutoriales</title>
+<link rel="stylesheet" href="output.css">
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          brand: '#39A900',       // verde principal (fondo del sidebar)
+          brandPill: '#4CB018',   // verde de cada botón/pill del menú (un poco más claro que el fondo)
+          brandDark: '#2E8600',
+          panel: '#1e1e1e',       // fondo oscuro alrededor de la app
+        }
+      }
+    }
+  }
+</script>
+</head>
+
+<body class="h-screen w-screen bg-panel flex items-center justify-center p-4 overflow-hidden font-sans">
+
+  <!-- ============ VENTANA DE LA APP ============ -->
+  <div class="w-full h-full max-w-[914px] max-h-[621px] bg-white rounded-xl overflow-hidden shadow-2xl flex flex-col">
+
+    <!-- Pestaña tipo navegador -->
+    <div class="bg-panel text-gray-300 text-[11px] px-4 py-2 shrink-0">
+      Educativo-Tutoriales
+    </div>
+
+    <!-- ============ HEADER ============ -->
+    <header class="h-12 bg-white flex items-center justify-between px-5 shrink-0 border-b border-gray-100">
+      <div class="flex items-center gap-2 font-extrabold text-brand text-sm">
+        <div class="w-6 h-6 rounded-full bg-brand text-white flex items-center justify-center text-xs">🎓</div>
+        EDU-TEST-SOFT
+      </div>
+      <div class="flex items-center gap-3">
+        <span class="text-gray-400 text-base cursor-pointer">🔔</span>
+        <div class="text-right leading-tight">
+          <p class="text-xs font-semibold text-gray-800">Nicolas Ruiz</p>
+          <p class="text-[10px] text-gray-400">Estudiante</p>
+        </div>
+        <div class="w-7 h-7 rounded-full bg-gray-200 flex items-center justify-center text-sm">👤</div>
+      </div>
+    </header>
+
+    <div class="flex flex-1 overflow-hidden">
+
+      <!-- ============ SIDEBAR ============ -->
+      <aside class="w-[190px] shrink-0 bg-brand overflow-y-auto text-[11px] py-3 px-2.5">
+
+        <h4 class="text-white font-semibold px-1.5 pb-2 text-[11px]">Educativo</h4>
+        <nav class="flex flex-col gap-1.5 mb-3">
+          <button class="nav-item flex items-center gap-1.5 text-left text-white bg-brandPill border border-white/40 rounded-md px-2.5 py-2 hover:brightness-110 transition-all">
+            📋 <span>¿Qué es plan de pruebas?</span>
+          </button>
+          <button class="nav-item flex items-center gap-1.5 text-left text-white bg-brandPill border border-white/40 rounded-md px-2.5 py-2 hover:brightness-110 transition-all">
+            📄 <span>¿Qué es un caso de prueba?</span>
+          </button>
+          <button class="nav-item flex items-center gap-1.5 text-left text-white bg-brandPill border border-white/40 rounded-md px-2.5 py-2 hover:brightness-110 transition-all">
+            📊 <span>¿Qué métricas hay?</span>
+          </button>
+          <button class="nav-item flex items-center gap-1.5 text-left text-white bg-brandPill border border-white/40 rounded-md px-2.5 py-2 hover:brightness-110 transition-all">
+            ✏️ <span>¿Tipos de pruebas?</span>
+          </button>
+          <button class="nav-item active flex items-center gap-1.5 text-left text-brand bg-white border border-white rounded-md px-2.5 py-2 font-semibold">
+            📹 <span>Videos tutoriales tipo NotebookLM</span>
+          </button>
+        </nav>
+
+        <h4 class="text-white font-semibold px-1.5 pb-2 text-[11px]">Ejecución</h4>
+        <nav class="flex flex-col gap-1.5">
+          <button class="nav-item flex items-center gap-1.5 text-left text-white bg-brandPill border border-white/40 rounded-md px-2.5 py-2 hover:brightness-110 transition-all">
+            🗂️ <span>Banco de proyectos</span>
+          </button>
+          <button class="nav-item flex items-center gap-1.5 text-left text-white bg-brandPill border border-white/40 rounded-md px-2.5 py-2 hover:brightness-110 transition-all">
+            📋 <span>Plan de pruebas</span>
+          </button>
+          <button class="nav-item flex items-center gap-1.5 text-left text-white bg-brandPill border border-white/40 rounded-md px-2.5 py-2 hover:brightness-110 transition-all">
+            📄 <span>Casos de pruebas</span>
+          </button>
+          <button class="nav-item flex items-center gap-1.5 text-left text-white bg-brandPill border border-white/40 rounded-md px-2.5 py-2 hover:brightness-110 transition-all">
+            ⚙️ <span>Gestión de pruebas</span>
+          </button>
+          <button class="nav-item flex items-center gap-1.5 text-left text-white bg-brandPill border border-white/40 rounded-md px-2.5 py-2 hover:brightness-110 transition-all">
+            🕐 <span>Métricas</span>
+          </button>
+        </nav>
+      </aside>
+
+      <!-- ============ CONTENIDO ============ -->
+      <main class="flex-1 overflow-y-auto p-6 bg-white">
+        <div class="flex items-center gap-2 mb-5">
+          <span class="text-brand text-lg">📹</span>
+          <h1 class="text-lg font-bold text-brandDark">Videos tutoriales tipo NotebookLM</h1>
+        </div>
+
+        <!-- Área de contenido / placeholder de video -->
+        <div id="videoArea"
+          class="bg-[#eaf4e9] border border-[#d7ead3] rounded-xl h-[420px] flex flex-col items-center justify-center gap-3 text-gray-400 cursor-pointer hover:bg-[#e3f0e1] transition-colors">
+          <span class="text-4xl">📹</span>
+          <p class="text-sm">Aún no hay videos cargados en esta sección</p>
+          <button id="addVideoBtn"
+            class="mt-2 bg-brand text-white rounded-full px-5 py-1.5 text-xs font-medium hover:bg-brandDark transition-colors">
+            + Agregar video
+          </button>
+        </div>
+      </main>
+    </div>
+  </div>
+
+  <!-- ============ TOAST ============ -->
+  <div id="toast"
+    class="fixed bottom-6 left-1/2 -translate-x-1/2 bg-gray-900 text-white text-sm px-5 py-2.5 rounded-lg transition-all duration-300 z-50 pointer-events-none opacity-0">
+  </div>
+
+  <script>
+    function showToast(msg) {
+      const toast = document.getElementById('toast');
+      toast.textContent = msg;
+      toast.style.opacity = '1';
+      toast.style.transform = 'translate(-50%, -8px)';
+      setTimeout(() => {
+        toast.style.opacity = '0';
+        toast.style.transform = 'translate(-50%, 0)';
+      }, 2200);
+    }
+
+    // Navegación: al hacer clic en un ítem, se marca como activo
+    document.querySelectorAll('.nav-item').forEach(item => {
+      item.addEventListener('click', () => {
+        document.querySelectorAll('.nav-item').forEach(i => {
+          i.classList.remove('active', 'bg-white', 'text-brand', 'font-semibold');
+          i.classList.add('bg-brandPill', 'text-white');
+        });
+        item.classList.remove('bg-brandPill', 'text-white');
+        item.classList.add('active', 'bg-white', 'text-brand', 'font-semibold');
+        showToast('Abriendo : ${item.textContent.trim()}');
+      });
+    });
+
+    // Botón "Agregar video"
+    document.getElementById('addVideoBtn').addEventListener('click', (e) => {
+      e.stopPropagation();
+      showToast('📹 Función de carga de video próximamente');
+    });
+  </script>
+
+</body>
+</html>

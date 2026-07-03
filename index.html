@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Proyectos - Rol Scrum</title>
+<link rel="stylesheet" href="output.css">
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          brand: '#39A900',      // verde principal (sidebar, badge, barra, botones) - color exacto de la imagen
+          brandDark: '#2E8600',  // hover / activo, un poco más oscuro
+          panel: '#202020',      // fondo oscuro alrededor de la app
+        }
+      }
+    }
+  }
+</script>
+<style>
+  #fileInput { display: none; }
+  #barFill { transition: width 0.4s ease; }
+  #toast { transform: translate(-50%, 16px); opacity: 0; }
+  #toast.show { transform: translate(-50%, 0); opacity: 1; }
+</style>
+</head>
+
+<body class="h-screen w-screen bg-panel flex items-center justify-center p-4 overflow-hidden font-sans">
+
+  <!-- ============ VENTANA DE LA APP ============ -->
+  <div class="w-full h-full max-w-[886px] max-h-[601px] bg-white rounded-xl overflow-hidden shadow-2xl flex flex-col">
+
+    <!-- Pestaña tipo navegador -->
+    <div class="bg-panel text-gray-300 text-[11px] px-4 py-2 shrink-0">
+      Proyectos-Rol-Scrum
+    </div>
+
+    <!-- ============ HEADER ============ -->
+    <header class="h-12 bg-white flex items-center justify-between px-5 shrink-0 border-b border-gray-100">
+      <div class="flex items-center gap-2 font-extrabold text-brand text-sm">
+        <div class="w-6 h-6 rounded-full bg-brand text-white flex items-center justify-center text-xs">🎓</div>
+        EDU-TEST-SOFT
+      </div>
+      <div class="flex items-center gap-3">
+        <span class="text-gray-400 text-base cursor-pointer">🔔</span>
+        <div class="text-right leading-tight">
+          <p class="text-xs font-semibold text-gray-800">Nicolas Ruiz</p>
+          <p class="text-[10px] text-gray-400">Scrum Master</p>
+        </div>
+        <div class="w-7 h-7 rounded-full bg-gray-200 flex items-center justify-center text-sm">👤</div>
+      </div>
+    </header>
+
+    <div class="flex flex-1 overflow-hidden">
+
+      <!-- ============ SIDEBAR ============ -->
+      <aside class="w-[184px] shrink-0 bg-brand overflow-y-auto text-[11px] pb-4">
+        <h4 class="text-white/90 font-semibold px-4 pt-3 pb-1 text-[11px]">Educativo</h4>
+        <nav class="flex flex-col">
+          <button class="nav-item flex items-center gap-1.5 text-left text-white px-4 py-1.5 hover:bg-black/10 transition-colors">
+            📋 <span>¿Qué es plan de pruebas?</span>
+          </button>
+          <button class="nav-item flex items-center gap-1.5 text-left text-white px-4 py-1.5 hover:bg-black/10 transition-colors">
+            📄 <span>¿Qué es un caso de prueba?</span>
+          </button>
+          <button class="nav-item flex items-center gap-1.5 text-left text-white px-4 py-1.5 hover:bg-black/10 transition-colors">
+            📊 <span>¿Qué métricas hay?</span>
+          </button>
+          <button class="nav-item flex items-center gap-1.5 text-left text-white px-4 py-1.5 hover:bg-black/10 transition-colors">
+            ❓ <span>¿Tipos de pruebas?</span>
+          </button>
+          <button class="nav-item flex items-center gap-1.5 text-left text-white px-4 py-1.5 hover:bg-black/10 transition-colors">
+            🎬 <span>Videos tutoriales tipo NotebookLM</span>
+          </button>
+        </nav>
+
+        <h4 class="text-white/90 font-semibold px-4 pt-3 pb-1 text-[11px]">Ejecución</h4>
+        <nav class="flex flex-col">
+          <button class="nav-item active flex items-center gap-1.5 text-left px-4 py-1.5 bg-black/25 text-white font-medium transition-colors">
+            📁 <span>Proyectos</span>
+          </button>
+          <button class="nav-item flex items-center gap-1.5 text-left text-white pl-8 pr-4 py-1.5 hover:bg-black/10 transition-colors">
+            🗂️ <span>Banco de proyectos</span>
+          </button>
+          <button class="nav-item flex items-center gap-1.5 text-left text-white px-4 py-1.5 hover:bg-black/10 transition-colors">
+            📋 <span>Plan de pruebas</span>
+          </button>
+          <button class="nav-item flex items-center gap-1.5 text-left text-white px-4 py-1.5 hover:bg-black/10 transition-colors">
+            📄 <span>Casos de pruebas</span>
+          </button>
+          <button class="nav-item flex items-center gap-1.5 text-left text-white px-4 py-1.5 hover:bg-black/10 transition-colors">
+            ⚙️ <span>Gestión de pruebas</span>
+          </button>
+          <button class="nav-item flex items-center gap-1.5 text-left text-white px-4 py-1.5 hover:bg-black/10 transition-colors">
+            📈 <span>Métricas</span>
+          </button>
+        </nav>
+      </aside>
+
+      <!-- ============ CONTENIDO ============ -->
+      <main class="flex-1 overflow-y-auto p-5 bg-white">
+        <div class="flex items-center gap-2 mb-4">
+          <span class="text-brand text-lg">📁</span>
+          <h1 class="text-lg font-bold text-gray-800">Proyectos</h1>
+        </div>
+
+        <div class="flex flex-col gap-4">
+
+          <!-- CARD PROGRESO -->
+          <section class="bg-white rounded-lg border border-gray-200 p-4">
+            <h3 class="text-xs font-semibold text-gray-700 mb-3">Mis proyectos</h3>
+            <div class="flex items-center gap-4">
+              <div class="w-28 shrink-0">
+                <p class="font-semibold text-sm text-gray-800">Proyecto 1</p>
+                <span class="inline-block mt-1 text-[10px] font-medium bg-brand text-white px-2 py-0.5 rounded">
+                  En ejecución
+                </span>
+              </div>
+              <div class="flex-1">
+                <div class="h-2 rounded-full bg-gray-100 overflow-hidden">
+                  <div id="barFill" class="h-full bg-brand rounded-full" style="width: 60%"></div>
+                </div>
+                <small id="progressLabel" class="text-[10px] text-gray-400 mt-1 block">60% completado</small>
+              </div>
+              <span id="progressPct" class="font-semibold text-sm w-8 text-right text-gray-800">60%</span>
+              <button id="verDetallesBtn"
+                class="text-xs border border-gray-300 rounded-full px-3 py-1.5 hover:bg-gray-50 transition-colors">
+                Ver detalles
+              </button>
+            </div>
+          </section>
+
+          <!-- CARD FORMULARIOS -->
+          <section class="bg-white rounded-lg border border-gray-200 flex">
+
+            <!-- CREAR PROYECTO -->
+            <form id="formCrearProyecto" class="flex-1 p-4 flex flex-col gap-2">
+              <h3 class="font-semibold text-sm mb-1 text-gray-800">Crear Proyecto</h3>
+
+              <input name="nombre" placeholder="Nombre"
+                class="field w-full rounded-full border border-gray-300 px-3 py-1.5 text-xs focus:outline-none focus:ring-2 focus:ring-brand focus:border-transparent" />
+
+              <textarea name="descripcion" rows="3" placeholder="Descripción"
+                class="field w-full rounded-2xl border border-gray-300 px-3 py-1.5 text-xs resize-none focus:outline-none focus:ring-2 focus:ring-brand focus:border-transparent"></textarea>
+
+              <input name="version" placeholder="Versión"
+                class="field w-full rounded-full border border-gray-300 px-3 py-1.5 text-xs focus:outline-none focus:ring-2 focus:ring-brand focus:border-transparent" />
+
+              <input name="fechaInicio" placeholder="Fecha Inicio" onfocus="(this.type='date')" onblur="if(!this.value) this.type='text'"
+                class="field w-full rounded-full border border-gray-300 px-3 py-1.5 text-xs text-gray-500 focus:outline-none focus:ring-2 focus:ring-brand focus:border-transparent" />
+
+              <input name="fechaFin" placeholder="Fecha Estimada Finalización" onfocus="(this.type='date')" onblur="if(!this.value) this.type='text'"
+                class="field w-full rounded-full border border-gray-300 px-3 py-1.5 text-xs text-gray-500 focus:outline-none focus:ring-2 focus:ring-brand focus:border-transparent" />
+
+              <select name="estado"
+                class="field w-full rounded-full border border-gray-300 px-3 py-1.5 text-xs text-gray-500 focus:outline-none focus:ring-2 focus:ring-brand focus:border-transparent">
+                <option value="">Estado</option>
+                <option>Pendiente</option>
+                <option>En ejecución</option>
+                <option>Finalizado</option>
+              </select>
+
+              <div class="flex items-center gap-2 mt-1">
+                <button type="button" id="guardarBtn"
+                  class="border border-gray-300 rounded-full px-5 py-1.5 text-xs font-medium hover:bg-gray-50 transition-colors">
+                  Guardar
+                </button>
+                <button type="submit"
+                  class="bg-brand text-white rounded-full px-5 py-1.5 text-xs font-medium hover:bg-brandDark transition-colors">
+                  Enviar a revisión
+                </button>
+              </div>
+            </form>
+
+            <!-- REQUERIMIENTOS -->
+            <form id="formRequerimientos" class="flex-1 p-4 flex flex-col gap-2 border-l border-gray-200">
+              <h3 class="font-semibold text-sm mb-1 text-gray-800">Requerimientos</h3>
+
+              <input placeholder="Nombre" class="field w-full rounded-full border border-gray-300 px-3 py-1.5 text-xs focus:outline-none focus:ring-2 focus:ring-brand focus:border-transparent" />
+              <input placeholder="Identificación" class="field w-full rounded-full border border-gray-300 px-3 py-1.5 text-xs focus:outline-none focus:ring-2 focus:ring-brand focus:border-transparent" />
+              <input placeholder="Descripción" class="field w-full rounded-full border border-gray-300 px-3 py-1.5 text-xs focus:outline-none focus:ring-2 focus:ring-brand focus:border-transparent" />
+              <input placeholder="Entrada" class="field w-full rounded-full border border-gray-300 px-3 py-1.5 text-xs focus:outline-none focus:ring-2 focus:ring-brand focus:border-transparent" />
+              <input placeholder="Salida" class="field w-full rounded-full border border-gray-300 px-3 py-1.5 text-xs focus:outline-none focus:ring-2 focus:ring-brand focus:border-transparent" />
+              <input placeholder="Criterios Aceptación" class="field w-full rounded-full border border-gray-300 px-3 py-1.5 text-xs focus:outline-none focus:ring-2 focus:ring-brand focus:border-transparent" />
+              <input placeholder="Rol" class="field w-full rounded-full border border-gray-300 px-3 py-1.5 text-xs focus:outline-none focus:ring-2 focus:ring-brand focus:border-transparent" />
+              <input placeholder="Dependencia" class="field w-full rounded-full border border-gray-300 px-3 py-1.5 text-xs focus:outline-none focus:ring-2 focus:ring-brand focus:border-transparent" />
+
+              <div class="flex items-end justify-between mt-1">
+                <div>
+                  <p class="text-[9px] text-gray-400 mb-1">Descargar Plantilla de carga masiva</p>
+                  <button type="button" id="descargarBtn"
+                    class="border border-gray-300 rounded-full px-4 py-1.5 text-xs font-medium hover:bg-gray-50 transition-colors">
+                    Descargar
+                  </button>
+                </div>
+                <div class="text-right">
+                  <button type="button" id="subirBtn"
+                    class="bg-brand text-white rounded-full px-5 py-1.5 text-xs font-medium hover:bg-brandDark transition-colors">
+                    Subir Archivo
+                  </button>
+                  <p class="text-[9px] text-gray-400 mt-1">Subir archivo formato docx</p>
+                  <input type="file" id="fileInput" accept=".doc,.docx" />
+                </div>
+              </div>
+            </form>
+
+          </section>
+        </div>
+      </main>
+    </div>
+  </div>
+
+  <!-- ============ TOAST ============ -->
+  <div id="toast"
+    class="fixed bottom-6 left-1/2 bg-gray-900 text-white text-sm px-5 py-2.5 rounded-lg transition-all duration-300 z-50 pointer-events-none">
+  </div>
+
+  <script>
+    function showToast(msg) {
+      const toast = document.getElementById('toast');
+      toast.textContent = msg;
+      toast.classList.add('show');
+      setTimeout(() => toast.classList.remove('show'), 2200);
+    }
+
+    document.querySelectorAll('.nav-item').forEach(item => {
+      item.addEventListener('click', () => {
+        document.querySelectorAll('.nav-item').forEach(i => {
+          i.classList.remove('active', 'bg-black/25', 'font-medium');
+        });
+        item.classList.add('active', 'bg-black/25', 'font-medium');
+      });
+    });
+
+    document.getElementById('guardarBtn').addEventListener('click', () => {
+      const form = document.getElementById('formCrearProyecto');
+      const data = Object.fromEntries(new FormData(form).entries());
+      if (!data.nombre) { showToast('⚠️ Completa al menos el nombre del proyecto'); return; }
+      console.log('Proyecto guardado:', data);
+      showToast('✅ Proyecto guardado como borrador');
+    });
+
+    document.getElementById('formCrearProyecto').addEventListener('submit', (e) => {
+      e.preventDefault();
+      const data = Object.fromEntries(new FormData(e.target).entries());
+      if (!data.nombre || !data.version) { showToast('⚠️ Nombre y versión son obligatorios'); return; }
+      console.log('Enviado a revisión:', data);
+      showToast('📤 Proyecto enviado a revisión');
+      e.target.reset();
+    });
+
+    document.getElementById('verDetallesBtn').addEventListener('click', () => {
+      showToast('Abriendo detalles de Proyecto 1...');
+    });
+
+    document.getElementById('descargarBtn').addEventListener('click', () => {
+      const contenido = "Plantilla de carga masiva de requerimientos\n\nNombre,Identificación,Descripción,Entrada,Salida,Criterios Aceptación,Rol,Dependencia\n";
+      const blob = new Blob([contenido], { type: 'text/plain' });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = 'plantilla-requerimientos.txt';
+      a.click();
+      URL.revokeObjectURL(url);
+      showToast('⬇️ Plantilla descargada');
+    });
+
+    const subirBtn = document.getElementById('subirBtn');
+    const fileInput = document.getElementById('fileInput');
+    subirBtn.addEventListener('click', () => fileInput.click());
+    fileInput.addEventListener('change', () => {
+      if (fileInput.files.length > 0) {
+        showToast('📎 Archivo "${fileInput.files[0].name}" cargado correctamente');
+      }
+    });
+
+    document.getElementById('formRequerimientos').addEventListener('submit', (e) => e.preventDefault());
+  </script>
+
+</body>
+</html>
