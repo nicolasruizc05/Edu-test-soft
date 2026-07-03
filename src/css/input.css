@@ -1,0 +1,8 @@
+@import "tailwindcss";
+
+@theme {
+  --color-app-green: #39A900;          /* Verde oscuro del fondo */
+  --color-app-green-light: #43b609;    /* ¡NUEVO! Verde claro para los botones */
+  --color-app-bg: #edf4ec;             /* Fondo general de la app */
+  --color-app-red: #c52222;            /* Botón Cancelar */
+}
