@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="src/output.css">
+    <title>Casos de Pruebas</title>
+</head>
+
+<body class="bg-white font-sans ">
+    <!--Header-->
+    <header>
+        <nav class="w-full h-16 bg-white border-b-2 border-gray-200 px-6 grid grid-cols-[auto_1fr_auto] items-center">
+
+            <!-- Logo -->
+            <a href="pagina_principal.html">
+                <div class="grid grid-cols-[auto_auto] items-center gap-3">
+                    <div class="w-11 h-11 rounded-lg flex items-center justify-center p-1.5 bg-[#39a900]">
+                        <img src="" class="w-full h-full object-contain" />
+                    </div>
+                    <span class="text-[#39a900] font-bold text-2xl tracking-wide">EDU-TEST-SOFT</span>
+                </div>
+            </a>
+
+            <div></div>
+
+            <!-- Notificaciones + Perfil -->
+            <a href="#">
+                <div class="grid grid-cols-[auto_auto_auto_auto] items-center gap-4">
+
+                    <!-- Notificaciones -->
+                    <button class="relative p-1 flex items-center justify-center">
+                        <img src="" class="w-6 h-6 object-contain" alt="Notificaciones" />
+                        <span class="absolute top-0 right-0 w-2 h-2 bg-black rounded-full border border-white"></span>
+                    </button>
+
+                    <!-- Nombre y rol -->
+                    <div class="grid grid-cols-1 text-right">
+                        <p class="text-sm font-semibold text-gray-800 leading-tight">Nicolas Ruiz</p>
+                        <p class="text-xs text-gray-500 font-medium mt-0.5">Estudiante</p>
+                    </div>
+
+                    <!-- Avatar -->
+                    <div class="w-10 h-10 bg-[#39a900] rounded-full flex items-center justify-center p-1.5">
+                        <img src="" class="w-full h-full object-cover" />
+                    </div>
+
+                </div>
+            </a>
+
+        </nav>
+    </header>
+    <!-- Contenido pagina -->
+    <div class="flex">
+        <!--Sidebar-->
+        <aside
+            class="w-72 h-[calc(100vh-64px)] bg-[#39a900] text-white p-4 flex flex-cols gap-6 font-sans shrink-0 overflow-y-auto">
+            <!--seccion:EDUCATIVO-->
+            <div>
+
+                <h3 class="text-xs font-bold uppercase tracking-wider text-green-100 opacity-80 mb-3 px-2">
+                    EDUCATIVO
+
+                </h3>
+
+                <div class="flex flex-col gap-2">
+                    <a href="#"
+                        class="flex items-center gap-2 px-3 py-2 bg-[#43b609] text-sm font-medium rounded-lg transition-colors hover:bg-white hover:text-green-600">
+                        📖<span>¿Que es plan de pruebas?</span>
+                    </a>
+                    <a href="#"
+                        class="flex items-center gap-2 px-3 py-2 bg-[#43b609] text-sm font-medium rounded-lg transition-colors hover:bg-white hover:text-green-600">
+                        📄<span>¿Que es un caso de pruebas</span>
+                    </a>
+                    <a href="Edu-Metricas.html"
+                        class="flex items-center gap-2 px-3 py-2 bg-[#43b609] text-sm font-medium rounded-lg transition-colors hover:bg-white hover:text-green-600">
+                        📊<span>¿Que metricas hay?</span>
+                    </a>
+                    <a href="Edu-Tipos-Pruebas.html"
+                        class="flex items-center gap-2 px-3 py-2 bg-[#43b609] text-sm font-medium rounded-lg transition-colors hover:bg-white hover:text-green-600">
+                        ✏️<span>¿Tipos de pruebas?</span>
+                    </a>
+                    <a href="#"
+                        class="flex items-center gap-2 px-3 py-2 bg-[#43b609] text-sm font-medium rounded-lg transition-colors hover:bg-white hover:text-green-600">
+                        📹<span>Video tutoriales tipo NotebookLM</span>
+                    </a>
+
+                </div>
+                <!--seccion:EJECUCION-->
+
+                <br>
+
+                <div>
+                    <h3 class="text-xs font-bold uppercase tracking-wider text-green-100 opacity-80 mb-3 px-2">
+                        EJECUCION
+                    </h3>
+                    <div class="flex flex-col gap-2">
+                        <a href="banco_de_proyecto.html"
+                            class="flex items-center gap-2 px-3 py-2 bg-[#43b609] hover:bg-white hover:text-green-600 text-sm font-medium rounded-lg transition-colors">
+                            📁<span>Bancos de proyectos</span>
+                        </a>
+                        <a href="plan_de_pruebas.html"
+                            class="flex items-center gap-2 px-3 py-2 bg-white text-green-600 text-sm font-medium rounded-lg transition-colors">
+                            📋<span>Plan de pruebas</span>
+                        </a>
+                        <a href="casos_de_pruebas.html"
+                            class="flex items-center gap-2 px-3 py-2 bg-[#43b609] hover:bg-white hover:text-green-600 text-sm font-medium rounded-lg transition-colors">
+                            📄<span>Casos de pruebas</span>
+                        </a>
+                        <a href="#"
+                            class="flex items-center gap-2 px-3 py-2 bg-[#43b609] hover:bg-white hover:text-green-600 text-sm font-medium rounded-lg transition-colors">
+                            ⚙️<span>Gestion de pruebas</span>
+                        </a>
+                        <a href="metricas.html"
+                            class="flex items-center gap-2 px-3 py-2 bg-[#43b609] hover:bg-white hover:text-green-600 text-sm font-medium rounded-lg transition-colors">
+                            🕒<span>Metricas</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </aside>
+        <!--Main-->
+
+        <main class="flex-1 bg-gray-200 p-6 rounded-3xl m-2">
+
+            <!-- Tarjeta título + dropdown -->
+            <div class="bg-white border-0  rounded-xl p-5 mb-6">
+                <div class="flex items-center gap-3 mb-4">
+                    <!-- ícono documento verde -->
+                    <div class="text-[#39a900]">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" class="w-8 h-8">
+                            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+                            <polyline points="14 2 14 8 20 8" />
+                            <line x1="16" y1="13" x2="8" y2="13" />
+                            <line x1="16" y1="17" x2="8" y2="17" />
+                        </svg>
+                    </div>
+                    <h1 class="text-[#39a900] font-bold text-3xl">Casos de pruebas</h1>
+                </div>
+                <!-- Dropdown seleccionar proyecto -->
+                <select
+                    class="w-64 border border-gray-300 rounded-md px-3 py-2 text-gray-500 text-sm focus:outline-none focus:ring-2 focus:ring-[#39a900] bg-white">
+                    <option value="" disabled selected>Seleccionar Proyecto</option>
+                    <option>Nombre de proyecto </option>
+                    <option>Proyecto Edu-Test-Soft </option>
+                </select>
+            </div>
+            <!-- Tabla de contenido -->
+            <div class=" bg-white rounded-2xl  mt-4 p-8">
+                <p class="  m-4 p-2 ">Listado de prueba de <span>(Nombre de proyecto)</span></p>
+                <table class="w-full text-sm rounded-4xl  mt-4 p-4">
+                    <thead class=" ">
+                        <tr class="bg-[#14ae5c] text-white ">
+                            <th class="text-left px-4 py-3 font-semibold rounded-l-2xl">ID</th>
+                            <th class="text-left px-4 py-3 font-semibold ">Nombre</th>
+                            <th class="text-left px-4 py-3 font-semibold">Requerimiento</th>
+                            <th class="text-left px-4 py-3 font-semibold">Funcionalidad<br>Características</th>
+                            <th class="text-left px-4 py-3 font-semibold">Prioridad</th>
+                            <th class="text-left px-4 py-3 font-semibold">Estado</th>
+                            <th class="px-4 py-3 rounded-r-2xl"></th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-gray-100">
+
+                        <!-- Fila CDP-001 -->
+                        <tr class="hover:bg-gray-50 transition">
+                            <td class="px-4 py-4 text-gray-700 font-medium">CDP-001</td>
+                            <td class="px-4 py-4 text-gray-600">Nombre Caso</td>
+                            <td class="px-4 py-4 text-gray-600">Nombre<br>Requerimiento</td>
+                            <td class="px-4 py-4 text-gray-400 text-xs">—</td>
+                            <td class="px-4 py-4">
+                                <div class="flex items-center gap-1 text-gray-500 text-xs">
+                                    <svg class="w-4 h-4 text-gray-400 flex shrink-0" viewBox="0 0 24 24" fill="none"
+                                        stroke="currentColor" stroke-width="2">
+                                        <circle cx="12" cy="12" r="10" />
+                                        <line x1="12" y1="8" x2="12" y2="12" />
+                                        <line x1="12" y1="16" x2="12.01" y2="16" />
+                                    </svg>
+                                    Alta /<br>baja/<br>media
+                                </div>
+                            </td>
+                            <td class="px-4 py-4">
+                                <span class="text-gray-700 text-sm">Activo</span>
+                            </td>
+                            <td class="px-4 py-4">
+                                <button
+                                    class="bg-[#39a900] text-white text-xs font-semibold px-4 py-2 rounded-md hover:bg-[#2d8700] transition">
+                                    Ver/editar
+                                </button>
+                            </td>
+                        </tr>
+
+                        <!-- Fila CDP-002 -->
+                        <tr class="hover:bg-gray-50 transition">
+                            <td class="px-4 py-4 text-gray-700 font-medium">CDP-002</td>
+                            <td class="px-4 py-4 text-gray-600">Nombre Caso</td>
+                            <td class="px-4 py-4 text-gray-600">Nombre<br>Requerimiento</td>
+                            <td class="px-4 py-4 text-gray-400 text-xs">—</td>
+                            <td class="px-4 py-4">
+                                <div class="flex items-center gap-1 text-gray-500 text-xs">
+                                    <svg class="w-4 h-4 text-gray-400 flex shrink-0" viewBox="0 0 24 24" fill="none"
+                                        stroke="currentColor" stroke-width="2">
+                                        <circle cx="12" cy="12" r="10" />
+                                        <line x1="12" y1="8" x2="12" y2="12" />
+                                        <line x1="12" y1="16" x2="12.01" y2="16" />
+                                    </svg>
+                                    Alta /<br>baja/<br>media
+                                </div>
+                            </td>
+                            <td class="px-4 py-4">
+                                <span class="text-gray-700 text-sm">Activo</span>
+                            </td>
+                            <td class="px-4 py-4">
+                                <button
+                                    class="bg-[#39a900] text-white text-xs font-semibold px-4 py-2 rounded-md hover:bg-[#2d8700] transition">
+                                    Ver/editar
+                                </button>
+                            </td>
+                        </tr>
+
+                        <!-- Fila CDP-003 -->
+                        <tr class="hover:bg-gray-50 transition">
+                            <td class="px-4 py-4 text-gray-700 font-medium">CDP-003</td>
+                            <td class="px-4 py-4 text-gray-600">Nombre Caso</td>
+                            <td class="px-4 py-4 text-gray-600">Nombre<br>Requerimiento</td>
+                            <td class="px-4 py-4 text-gray-400 text-xs">—</td>
+                            <td class="px-4 py-4">
+                                <div class="flex items-center gap-1 text-gray-500 text-xs">
+                                    <svg class="w-4 h-4 text-gray-400 shrink-0" viewBox="0 0 24 24" fill="none"
+                                        stroke="currentColor" stroke-width="2">
+                                        <circle cx="12" cy="12" r="10" />
+                                        <line x1="12" y1="8" x2="12" y2="12" />
+                                        <line x1="12" y1="16" x2="12.01" y2="16" />
+                                    </svg>
+                                    Alta /<br>baja/<br>media
+                                </div>
+                            </td>
+                            <td class="px-4 py-4">
+                                <span class="text-gray-700 text-sm">Activo</span>
+                            </td>
+                            <td class="px-4 py-4">
+                                <button
+                                    class="bg-[#39a900] text-white text-xs font-semibold px-4 py-2 rounded-md hover:bg-[#2d8700] transition">
+                                    Ver/editar
+                                </button>
+                            </td>
+                        </tr>
+
+                        <!-- Fila CDP-004 -->
+                        <tr class="hover:bg-gray-50 transition">
+                            <td class="px-4 py-4 text-gray-700 font-medium">CDP-004</td>
+                            <td class="px-4 py-4 text-gray-600">Nombre Caso</td>
+                            <td class="px-4 py-4 text-gray-600">Nombre<br>Requerimiento</td>
+                            <td class="px-4 py-4 text-gray-400 text-xs">—</td>
+                            <td class="px-4 py-4">
+                                <div class="flex items-center gap-1 text-gray-500 text-xs">
+                                    <svg class="w-4 h-4 text-gray-400 shrink-0" viewBox="0 0 24 24" fill="none"
+                                        stroke="currentColor" stroke-width="2">
+                                        <circle cx="12" cy="12" r="10" />
+                                        <line x1="12" y1="8" x2="12" y2="12" />
+                                        <line x1="12" y1="16" x2="12.01" y2="16" />
+                                    </svg>
+                                    Alta /<br>baja/<br>media
+                                </div>
+                            </td>
+                            <td class="px-4 py-4">
+                                <span class="text-gray-700 text-sm">Activo</span>
+                            </td>
+                            <td class="px-4 py-4">
+                                <button
+                                    class="bg-[#39a900] text-white text-xs font-semibold px-4 py-2 rounded-md hover:bg-[#2d8700] transition">
+                                    Ver/editar
+                                </button>
+                            </td>
+                        </tr>
+
+                    </tbody>
+                </table>
+                <div class="mt-20 p-2 flex justify-items-start gap-4 ">
+                    <button href_="#casos_de_pruebas.html" class="flex bg-[#39a900] border-2 border-black rounded-2xl p-1.5  h-8 w-50 gap-2 items-center justify-center text-white">⊛ Crear Caso</button>
+                    <button class="flex bg-[#39a900] border-2 border-black rounded-2xl p-1.5  h-8 w-50  items-center justify-center text-white">Descargar plantilla</button>
+                    <button class="flex bg-[#39a900] border-2 border-black rounded-2xl p-1.5  h-8 w-50  items-center justify-center text-white"> Importar (Excel)</button>
+                    <button class="flex bg-[#39a900] border-2 border-black rounded-2xl p-1.5  h-8 w-50  items-center justify-center text-white"> Exportar (Excel/PDF)</button>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+
+</html>

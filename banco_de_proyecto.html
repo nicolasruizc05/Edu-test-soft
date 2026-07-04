@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link class="styles" rel="stylesheet" href="src/output.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>EDU-TEST-SOFT - Banco de Proyectos</title>
+    <!-- Estilo personalizado para el efecto hover de la barra lateral -->
+    <style>
+        .btn-sidebar-sena {
+            background-color: #43b609;
+            color: #ffffff;
+            transition: all 0.2s ease-in-out;
+        }
+        .btn-sidebar-sena:hover {
+            background-color: #ffffff !important;
+            color: #39a900 !important;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 font-sans min-h-screen flex flex-col">
+
+    <!-- CABECERA (HEADER) -->
+    <header class="bg-white border-b border-gray-200 px-6 py-3 flex justify-between items-center z-10">
+        <div class="flex items-center space-x-2 font-bold text-xl" style="color: #39a900;">
+            <div class="text-white p-2 rounded-lg" style="background-color: #39a900;">
+                <i class="fa-solid fa-graduation-cap"></i>
+            </div>
+            <span>EDU-TEST-SOFT</span>
+        </div>
+        
+        <div class="flex items-center space-x-4">
+            <button class="text-gray-600 hover:text-gray-800 relative">
+                <i class="fa-regular fa-bell text-xl"></i>
+                <span class="absolute top-0 right-0 w-2 h-2 bg-red-500 rounded-full"></span>
+            </button>
+            <div class="border-l border-gray-300 h-6 mx-2"></div>
+            <div class="flex items-center space-x-3">
+                <div class="text-right">
+                    <p class="text-sm font-semibold text-gray-800">Jenny Marrugo</p>
+                    <p class="text-xs text-gray-500">Estudiante</p>
+                </div>
+                <div class="w-10 h-10 text-white rounded-full flex items-center justify-center font-bold" style="background-color: #39a900;">
+                    JM
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- CONTENEDOR PRINCIPAL -->
+    <div class="flex flex-1">
+        
+        <!-- BARRA LATERAL -->
+        <aside class="w-72 h-[calc(100vh-64px)] text-white p-4 flex flex-col gap-6 font-sans shrink-0 overflow-y-auto shadow-md" style="background-color: #39a900;">
+            
+            <!-- Sección: EDUCATIVO -->
+            <div>
+                <h3 class="text-xs font-bold uppercase tracking-wider text-white opacity-90 mb-3 px-2">
+                    EDUCATIVO
+                </h3>
+                <div class="flex flex-col gap-2">
+                    <a href="#" class="btn-sidebar-sena flex items-center gap-2 px-3 py-2 text-sm font-medium rounded-lg">
+                        <span>📖</span><span>¿Qué es plan de pruebas?</span>
+                    </a>
+                    <a href="#" class="btn-sidebar-sena flex items-center gap-2 px-3 py-2 text-sm font-medium rounded-lg">
+                        <span>📄</span><span>¿Qué es un caso de pruebas?</span>
+                    </a>
+                    <a href="Edu-Metricas.html" class="btn-sidebar-sena flex items-center gap-2 px-3 py-2 text-sm font-medium rounded-lg">
+                        <span>📊</span><span>¿Qué métricas hay?</span>
+                    </a>
+                    <a href="Edu-Tipos-Pruebas.html" class="btn-sidebar-sena flex items-center gap-2 px-3 py-2 text-sm font-medium rounded-lg">
+                        <span>✏️</span><span>¿Tipos de pruebas?</span>
+                    </a>
+                    <a href="#" class="btn-sidebar-sena flex items-center gap-2 px-3 py-2 text-sm font-medium rounded-lg">
+                        <span>📹</span><span>Video tutoriales tipo NotebookLM</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Sección: EJECUCIÓN -->
+            <div>
+                <h3 class="text-xs font-bold uppercase tracking-wider text-white opacity-90 mb-3 px-2">
+                    EJECUCIÓN
+                </h3>
+                <div class="flex flex-col gap-2">
+                    <!-- Elemento Activo: Fijo en Blanco -->
+                    <a href="#" class="flex items-center gap-2 px-3 py-2 bg-white text-sm font-bold rounded-lg shadow-sm" style="color: #39a900;">
+                        <span>📁</span><span>Banco de proyectos</span>
+                    </a>
+                    <a href="plan_de_pruebas.html" class="btn-sidebar-sena flex items-center gap-2 px-3 py-2 text-sm font-medium rounded-lg">
+                        <span>📋</span><span>Plan de pruebas</span>
+                    </a>
+                    <a href="casos_de_pruebas.html" class="btn-sidebar-sena flex items-center gap-2 px-3 py-2 text-sm font-medium rounded-lg">
+                        <span>📄</span><span>Casos de pruebas</span>
+                    </a>
+                    <a href="#" class="btn-sidebar-sena flex items-center gap-2 px-3 py-2 text-sm font-medium rounded-lg">
+                        <span>⚙️</span><span>Gestión de pruebas</span>
+                    </a>
+                    <a href="metricas.html" class="btn-sidebar-sena flex items-center gap-2 px-3 py-2 text-sm font-medium rounded-lg">
+                        <span>🕒</span><span>Métricas</span>
+                    </a>
+                </div>
+            </div>
+        </aside>
+
+        <!-- ÁREA DE CONTENIDO (MAIN) -->
+        <main id="banco-proyectos" class="flex-1 p-8 bg-gray-100/60 overflow-y-auto scroll-smooth">
+            
+            <!-- Título de Sección -->
+            <div class="flex items-center space-x-3 mb-6">
+                <i class="fa-regular fa-folder-open text-3xl" style="color: #39a900;"></i>
+                <h1 class="text-3xl font-bold" style="color: #39a900;">Banco de proyectos</h1>
+            </div>
+
+            <!-- Buscador -->
+            <div class="mb-6 relative max-w-5xl">
+                <span class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none text-gray-400">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </span>
+                <input type="text" placeholder="Buscar proyectos..." class="w-full pl-10 pr-4 py-2 bg-white border border-gray-200 rounded-lg focus:outline-none focus:ring-2 text-sm shadow-sm" style="--tw-ring-color: #39a900;">
+            </div>
+
+            <!-- Lista de Tarjetas de Proyectos -->
+            <div class="space-y-6 max-w-5xl">
+                
+                <!-- Tarjeta de Proyecto 1 (Basada en image_0d6036.png) -->
+                <div class="bg-white border border-gray-200 rounded-xl p-6 shadow-sm hover:shadow-md transition">
+                    <div class="flex justify-between items-start mb-4">
+                        <div class="flex items-center space-x-4">
+                            <!-- Ícono </> claro como en la imagen -->
+                            <div class="bg-green-50 px-3 py-2 rounded-xl font-bold text-xl flex items-center justify-center" style="color: #39a900;">
+                                &lt;/&gt;
+                            </div>
+                            <div>
+                                <h2 class="text-xl font-bold text-gray-800 tracking-tight">Nombre de Proyecto</h2>
+                                <div class="flex space-x-2 mt-1">
+                                    <span class="bg-blue-50 text-blue-600 text-xs font-semibold px-2.5 py-0.5 rounded">Estado</span>
+                                    <span class="bg-red-50 text-red-600 text-xs font-semibold px-2.5 py-0.5 rounded">Prioridad:</span>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="text-gray-400 hover:text-gray-600">
+                            <i class="fa-solid fa-ellipsis-vertical"></i>
+                        </button>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm text-gray-600 mb-4">
+                        <div class="flex items-center space-x-2">
+                            <i class="fa-regular fa-calendar text-gray-400"></i>
+                            <span><strong>Inicio:</strong> 01/1/2026</span>
+                        </div>
+                        <div class="flex items-center space-x-2">
+                            <i class="fa-regular fa-calendar text-gray-400"></i>
+                            <span><strong>Fin:</strong> 01/1/2026</span>
+                        </div>
+                        <div class="flex items-center space-x-2">
+                            <i class="fa-regular fa-user text-gray-400"></i>
+                            <span><strong>Responsable:</strong> Nombre Responsable</span>
+                        </div>
+                    </div>
+
+                    <!-- Barra de Progreso -->
+                    <div class="mb-6">
+                        <div class="flex justify-between text-xs font-semibold text-gray-600 mb-1">
+                            <span>Progreso de Pruebas</span>
+                            <span>245 / 380 (64%)</span>
+                        </div>
+                        <div class="w-full bg-gray-100 h-2.5 rounded-full">
+                            <div class="h-2.5 rounded-full" style="width: 64%; background-color: #39a900;"></div>
+                        </div>
+                    </div>
+
+                    <!-- Botones de Acción (Estilo Verde/Blanco exacto) -->
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-3">
+                        <button class="px-6 py-2 bg-white border font-semibold rounded-full text-sm shadow-sm transition hover:bg-green-50" style="border-color: #39a900; color: #39a900;">
+                            Ver Detalles
+                        </button>
+                        <button class="px-6 py-2 bg-white border font-semibold rounded-full text-sm shadow-sm transition hover:bg-green-50" style="border-color: #39a900; color: #39a900;">
+                            <a href="plan_de_pruebas.html" >
+                             Plan de Pruebas
+                             </a>
+                            
+                  
+                        </button>
+                        <button class="px-6 py-2 bg-white border font-semibold rounded-full text-sm shadow-sm transition hover:bg-green-50" style="border-color: #39a900; color: #39a900;">
+                            <i class="fa-regular fa-circle-check text-base"></i>
+                            <span>Casos de Prueba</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Tarjeta de Proyecto 2 (Exactamente idéntica) -->
+                <div class="bg-white border border-gray-200 rounded-xl p-6 shadow-sm hover:shadow-md transition">
+                    <div class="flex justify-between items-start mb-4">
+                        <div class="flex items-center space-x-4">
+                            <!-- Ícono </> claro como en la imagen -->
+                            <div class="bg-green-50 px-3 py-2 rounded-xl font-bold text-xl flex items-center justify-center" style="color: #39a900;">
+                                &lt;/&gt;
+                            </div>
+                            <div>
+                                <h2 class="text-xl font-bold text-gray-800 tracking-tight">Nombre de Proyecto</h2>
+                                <div class="flex space-x-2 mt-1">
+                                    <span class="bg-blue-50 text-blue-600 text-xs font-semibold px-2.5 py-0.5 rounded">Estado</span>
+                                    <span class="bg-red-50 text-red-600 text-xs font-semibold px-2.5 py-0.5 rounded">Prioridad:</span>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="text-gray-400 hover:text-gray-600">
+                            <i class="fa-solid fa-ellipsis-vertical"></i>
+                        </button>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm text-gray-600 mb-4">
+                        <div class="flex items-center space-x-2">
+                            <i class="fa-regular fa-calendar text-gray-400"></i>
+                            <span><strong>Inicio:</strong> 01/1/2026</span>
+                        </div>
+                        <div class="flex items-center space-x-2">
+                            <i class="fa-regular fa-calendar text-gray-400"></i>
+                            <span><strong>Fin:</strong> 01/1/2026</span>
+                        </div>
+                        <div class="flex items-center space-x-2">
+                            <i class="fa-regular fa-user text-gray-400"></i>
+                            <span><strong>Responsable:</strong> Nombre Responsable</span>
+                        </div>
+                    </div>
+
+                    <!-- Barra de Progreso -->
+                    <div class="mb-6">
+                        <div class="flex justify-between text-xs font-semibold text-gray-600 mb-1">
+                            <span>Progreso de Pruebas</span>
+                            <span>245 / 380 (64%)</span>
+                        </div>
+                        <div class="w-full bg-gray-100 h-2.5 rounded-full">
+                            <div class="h-2.5 rounded-full" style="width: 64%; background-color: #39a900;"></div>
+                        </div>
+                    </div>
+
+                    <!-- Botones de Acción (Estilo Verde/Blanco exacto) -->
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-3">
+                        <button class="px-6 py-2 bg-white border font-semibold rounded-full text-sm shadow-sm transition hover:bg-green-50" style="border-color: #39a900; color: #39a900;">
+                            Ver Detalles
+                        </button>
+                        <button class="px-6 py-2 bg-white border font-semibold rounded-full text-sm shadow-sm transition hover:bg-green-50" style="border-color: #39a900; color: #39a900;">
+                           <a href="plan_de_pruebas.html" >
+                            Plan de Pruebas
+                            </a>
+                        </button>
+                        <button class="px-6 py-2 bg-white border font-semibold rounded-full text-sm shadow-sm transition hover:bg-green-50" style="border-color: #39a900; color: #39a900;">
+                            <i class="fa-regular fa-circle-check text-base"></i>
+                            <span>Casos de Prueba</span>
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+        </main>
+    </div>
+
+</body>
+</html>
