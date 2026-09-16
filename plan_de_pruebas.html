@@ -10,12 +10,14 @@
 <body class="bg-gray-50 font-sans min-h-screen flex flex-col">
 
     <header class="bg-white border-b border-gray-200 px-6 py-3 flex justify-between items-center z-10">
-        <div class="flex items-center space-x-2 font-bold text-xl" style="color: #39a900;">
-            <div class="text-white p-2 rounded-lg" style="background-color: #39a900;">
-                <i class="fa-solid fa-graduation-cap"></i>
+       <a href="pagina_principal.html">
+            <div class="flex items-center space-x-2 font-bold text-xl" style="color: #39a900;">
+                <div class="text-white p-2 rounded-lg" style="background-color: #39a900;">
+                    <i class="fa-solid fa-graduation-cap"></i>
+                </div>
+                <span>EDU-TEST-SOFT</span>
             </div>
-            <span>EDU-TEST-SOFT</span>
-        </div>
+        </a>
         
         <div class="flex items-center space-x-4">
             <button class="text-gray-600 hover:text-gray-800 relative">
@@ -82,6 +84,10 @@
                     <a href="metricas.html" class="btn-sidebar-sena flex items-center gap-2 px-3 py-2 text-sm font-medium rounded-lg">
                         <span>🕒</span><span>Métricas</span>
                     </a>
+                    <a href="index.html", id="cierre",
+                            class="flex items-center gap-2 px-3 py-2  bg-[bg-white] hover:bg-white hover:text-red-600 text-sm font-medium rounded-lg transition-colors text justify-center" onclick="cerrar()">
+                            <span>Cerrar Sesion</span>
+                        </a>
                 </div>
             </div>
         </aside>
@@ -225,6 +231,6 @@
 
         </main>
     </div>
-
+<script src="JS/script.js"></script>
 </body>
 </html>
