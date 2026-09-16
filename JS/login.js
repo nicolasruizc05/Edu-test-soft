@@ -22,6 +22,11 @@ let iniciar =()=>{
         document.getElementById("inicio").click()
     }
     else{
-        alert("Credenciales incorrectas. Por favor, inténtelo de nuevo.")
+        Swal.fire({
+            title:"Usuario Invalido",
+            text:"Credenciales o contraseña incorrectos, por favor intentelo nuevamente",
+            icon:"error",
+            confirmButtonColor:"#39a900"
+        })
     }
 }
