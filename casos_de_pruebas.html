@@ -5,51 +5,39 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="src/output.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <title>Casos de Pruebas</title>
 </head>
 
 <body class="bg-white font-sans ">
-    <!--Header-->
-    <header>
-        <nav class="w-full h-16 bg-white border-b-2 border-gray-200 px-6 grid grid-cols-[auto_1fr_auto] items-center">
-
-            <!-- Logo -->
-            <a href="pagina_principal.html">
-                <div class="grid grid-cols-[auto_auto] items-center gap-3">
-                    <div class="w-11 h-11 rounded-lg flex items-center justify-center p-1.5 bg-[#39a900]">
-                        <img src="" class="w-full h-full object-contain" />
-                    </div>
-                    <span class="text-[#39a900] font-bold text-2xl tracking-wide">EDU-TEST-SOFT</span>
+    <!-- CABECERA (HEADER) -->
+    <header class="bg-white border-b border-gray-200 px-6 py-3 flex justify-between items-center z-10">
+        <a href="pagina_principal.html">
+            <div class="flex items-center space-x-2 font-bold text-xl" style="color: #39a900;">
+                <div class="text-white p-2 rounded-lg" style="background-color: #39a900;">
+                    <i class="fa-solid fa-graduation-cap"></i>
                 </div>
-            </a>
+                <span>EDU-TEST-SOFT</span>
+            </div>
+        </a>
 
-            <div></div>
-
-            <!-- Notificaciones + Perfil -->
-            <a href="#">
-                <div class="grid grid-cols-[auto_auto_auto_auto] items-center gap-4">
-
-                    <!-- Notificaciones -->
-                    <button class="relative p-1 flex items-center justify-center">
-                        <img src="" class="w-6 h-6 object-contain" alt="Notificaciones" />
-                        <span class="absolute top-0 right-0 w-2 h-2 bg-black rounded-full border border-white"></span>
-                    </button>
-
-                    <!-- Nombre y rol -->
-                    <div class="grid grid-cols-1 text-right">
-                        <p class="text-sm font-semibold text-gray-800 leading-tight">Nicolas Ruiz</p>
-                        <p class="text-xs text-gray-500 font-medium mt-0.5">Estudiante</p>
-                    </div>
-
-                    <!-- Avatar -->
-                    <div class="w-10 h-10 bg-[#39a900] rounded-full flex items-center justify-center p-1.5">
-                        <img src="" class="w-full h-full object-cover" />
-                    </div>
-
+        <div class="flex items-center space-x-4">
+            <button class="text-gray-600 hover:text-gray-800 relative">
+                <i class="fa-regular fa-bell text-xl"></i>
+                <span class="absolute top-0 right-0 w-2 h-2 bg-red-500 rounded-full"></span>
+            </button>
+            <div class="border-l border-gray-300 h-6 mx-2"></div>
+            <div class="flex items-center space-x-3">
+                <div class="text-right">
+                    <p class="text-sm font-semibold text-gray-800" id="name"></p>
+                    <p class="text-xs text-gray-500" id="role"></p>
                 </div>
-            </a>
-
-        </nav>
+                <div class="w-10 h-10 text-white rounded-full flex items-center justify-center font-bold"
+                    style="background-color: #39a900;">
+                    <span id="inicial"></span>
+                </div>
+            </div>
+        </div>
     </header>
     <!-- Contenido pagina -->
     <div class="flex">
@@ -115,6 +103,11 @@
                         <a href="metricas.html"
                             class="flex items-center gap-2 px-3 py-2 bg-[#43b609] hover:bg-white hover:text-green-600 text-sm font-medium rounded-lg transition-colors">
                             🕒<span>Metricas</span>
+                        </a>
+                        <a href="index.html" , id="cierre" ,
+                            class="flex items-center gap-2 px-3 py-2  bg-[bg-white] hover:bg-white hover:text-red-600 text-sm font-medium rounded-lg transition-colors text justify-center"
+                            onclick="cerrar()">
+                            <span>Cerrar Sesion</span>
                         </a>
                     </div>
                 </div>
@@ -279,14 +272,23 @@
                     </tbody>
                 </table>
                 <div class="mt-20 p-2 flex justify-items-start gap-4 ">
-                    <button href_="#casos_de_pruebas.html" class="flex bg-[#39a900] border-2 border-black rounded-2xl p-1.5  h-8 w-50 gap-2 items-center justify-center text-white">⊛ Crear Caso</button>
-                    <button class="flex bg-[#39a900] border-2 border-black rounded-2xl p-1.5  h-8 w-50  items-center justify-center text-white">Descargar plantilla</button>
-                    <button class="flex bg-[#39a900] border-2 border-black rounded-2xl p-1.5  h-8 w-50  items-center justify-center text-white"> Importar (Excel)</button>
-                    <button class="flex bg-[#39a900] border-2 border-black rounded-2xl p-1.5  h-8 w-50  items-center justify-center text-white"> Exportar (Excel/PDF)</button>
+                    <button href_="#casos_de_pruebas.html"
+                        class="flex bg-[#39a900] border-2 border-black rounded-2xl p-1.5  h-8 w-50 gap-2 items-center justify-center text-white">⊛
+                        Crear Caso</button>
+                    <button
+                        class="flex bg-[#39a900] border-2 border-black rounded-2xl p-1.5  h-8 w-50  items-center justify-center text-white">Descargar
+                        plantilla</button>
+                    <button
+                        class="flex bg-[#39a900] border-2 border-black rounded-2xl p-1.5  h-8 w-50  items-center justify-center text-white">
+                        Importar (Excel)</button>
+                    <button
+                        class="flex bg-[#39a900] border-2 border-black rounded-2xl p-1.5  h-8 w-50  items-center justify-center text-white">
+                        Exportar (Excel/PDF)</button>
                 </div>
             </div>
         </main>
     </div>
+    <script src="JS/script.js"></script>
 </body>
 
 </html>

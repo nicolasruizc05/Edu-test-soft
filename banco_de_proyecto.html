@@ -23,12 +23,14 @@
 
     <!-- CABECERA (HEADER) -->
     <header class="bg-white border-b border-gray-200 px-6 py-3 flex justify-between items-center z-10">
-        <div class="flex items-center space-x-2 font-bold text-xl" style="color: #39a900;">
-            <div class="text-white p-2 rounded-lg" style="background-color: #39a900;">
-                <i class="fa-solid fa-graduation-cap"></i>
+       <a href="pagina_principal.html">
+            <div class="flex items-center space-x-2 font-bold text-xl" style="color: #39a900;">
+                <div class="text-white p-2 rounded-lg" style="background-color: #39a900;">
+                    <i class="fa-solid fa-graduation-cap"></i>
+                </div>
+                <span>EDU-TEST-SOFT</span>
             </div>
-            <span>EDU-TEST-SOFT</span>
-        </div>
+        </a>
         
         <div class="flex items-center space-x-4">
             <button class="text-gray-600 hover:text-gray-800 relative">
@@ -38,11 +40,11 @@
             <div class="border-l border-gray-300 h-6 mx-2"></div>
             <div class="flex items-center space-x-3">
                 <div class="text-right">
-                    <p class="text-sm font-semibold text-gray-800">Jenny Marrugo</p>
-                    <p class="text-xs text-gray-500">Estudiante</p>
+                    <p class="text-sm font-semibold text-gray-800" id="name"></p>
+                    <p class="text-xs text-gray-500" id="role"></p>
                 </div>
                 <div class="w-10 h-10 text-white rounded-full flex items-center justify-center font-bold" style="background-color: #39a900;">
-                    JM
+                    <span id="inicial"></span>
                 </div>
             </div>
         </div>
@@ -100,6 +102,10 @@
                     <a href="metricas.html" class="btn-sidebar-sena flex items-center gap-2 px-3 py-2 text-sm font-medium rounded-lg">
                         <span>🕒</span><span>Métricas</span>
                     </a>
+                    <a href="index.html", id="cierre",
+                            class="flex items-center gap-2 px-3 py-2  bg-[bg-white] hover:bg-white hover:text-red-600 text-sm font-medium rounded-lg transition-colors text justify-center" onclick="cerrar()">
+                            <span>Cerrar Sesion</span>
+                        </a>
                 </div>
             </div>
         </aside>
@@ -257,6 +263,6 @@
             </div>
         </main>
     </div>
-
+<script src="JS/script.js"></script>
 </body>
 </html>
