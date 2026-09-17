@@ -27,23 +27,44 @@
                 <span>EDU-TEST-SOFT</span>
             </div>
         </a>
-        
-        <div class="flex items-center space-x-4">
-            <button class="text-gray-600 hover:text-gray-800 relative">
-                <i class="fa-regular fa-bell text-xl"></i>
-                <span class="absolute top-0 right-0 w-2 h-2 bg-red-500 rounded-full"></span>
-            </button>
-            <div class="border-l border-gray-300 h-6 mx-2"></div>
-            <div class="flex items-center space-x-3">
-                <div class="text-right">
-                    <p class="text-sm font-semibold text-gray-800" id="name"></p>
-                    <p class="text-xs text-gray-500" id="role"></p>
-                 </div>
-                <div class="w-10 h-10 text-white rounded-full flex items-center justify-center font-bold" style="background-color: #39a900;">
-                    <span id="inicial"></span>
+            
+            <div class="flex items-center space-x-4">
+                <!-- Botón de Notificaciones -->
+                        <button class="text-gray-600 hover:text-gray-800 relative focus:outline-none">
+                            <i class="fa-regular fa-bell text-xl"></i>
+                            <span class="absolute top-0 right-0 w-2 h-2 bg-red-500 rounded-full"></span>
+                        </button>
+                
+                <div class="border-l border-gray-300 h-6 mx-2"></div>
+
+                <!-- CONTENEDOR DEL BOTÓN DE PERFIL -->
+                <div class="relative">
+                    <!-- Todo el conjunto es un botón clickable -->
+                    <button id="btnPerfil" type="button" class="flex items-center space-x-3 focus:outline-none cursor-pointer p-1 rounded-lg hover:bg-gray-100 transition-colors">
+                        <div class="text-right pointer-events-none">
+                            <p class="text-sm font-semibold text-gray-800" id="name">Nicolas Ruiz</p>
+                            <p class="text-xs text-gray-500" id="role">Aprendiz</p>
+                        </div>
+                        <div class="w-10 h-10 text-white rounded-full flex items-center justify-center font-bold shrink-0" style="background-color: #39a900;">
+                            <span id="inicial">NR</span>
+                        </div>
+                    </button>
+
+                    <!-- PESTAÑA DESPLEGABLE (FLOTANTE) -->
+                    <div id="menuPerfil" style="display: none;"  class=" absolute right-0 mt-2 w-48 bg-white rounded-xl shadow-xl border border-gray-50 py-2 z-50">
+                        <a href="#" class="flex items-center gap-3 px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 transition-colors">
+                            <i class="fa-regular fa-user text-[#39a900]"></i> Mi Perfil
+                        </a>
+                        <a href="#" class="flex items-center gap-3 px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 transition-colors">
+                            <i class="fa-solid fa-gear text-[#39a900]"></i> Configuración
+                        </a>
+                        <hr class="my-1 border-gray-50">
+                        <a href="#" class="flex items-center gap-3 px-4 py-2 text-sm text-red-600 hover:bg-gray-100 transition-colors">
+                            <i class="fa-solid fa-right-from-bracket"></i> Cerrar Sesión
+                        </a>
+                    </div>
                 </div>
             </div>
-        </div>
     </header>
 
         <!--CUERPO-->
@@ -113,10 +134,7 @@
                             class="flex items-center gap-2 px-3 py-2 bg-[#43b609] hover:bg-white hover:text-green-600 text-sm font-medium rounded-lg transition-colors">
                             🕒<span>Metricas</span>
                         </a>
-                        <a href="index.html", id="cierre",
-                            class="flex items-center gap-2 px-3 py-2  bg-[bg-white] hover:bg-white hover:text-red-600 text-sm font-medium rounded-lg transition-colors text justify-center" onclick="cerrar()">
-                            <span>Cerrar Sesion</span>
-                        </a>
+                       
                     </div>
                 </div>
             </div>
